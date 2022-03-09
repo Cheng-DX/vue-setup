@@ -1,6 +1,6 @@
 <template>
   <el-header class="header">
-    <el-icon size="30" @click="change()" class="icon">
+    <el-icon size="30" @click="collapseStore.change()" class="icon">
       <fold v-if="collapse" />
       <expand v-else />
     </el-icon>
@@ -27,11 +27,6 @@ const matched = computed(() => route.matched)
 
 const collapseStore = useCollapseStore()
 const collapse = computed(() => collapseStore.collapse)
-
-function change(){
-  collapseStore.change()
-}
-
 </script>
 
 <style scoped lang="scss">

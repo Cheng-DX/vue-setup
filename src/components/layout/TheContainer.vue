@@ -21,7 +21,7 @@ import TheSlider from './TheSlider.vue'
   height: 100%;
   width: 100%;
 }
-.header-main{
+.header-main {
   display: flex;
   flex-direction: column;
 }
