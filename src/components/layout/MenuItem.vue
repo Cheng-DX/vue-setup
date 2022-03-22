@@ -1,5 +1,5 @@
 <template>
-  <el-sub-menu v-if="hasMoreChildren(item)">
+  <el-sub-menu v-if="hasMoreChildren(item)" :index="item.path">
     <template #title>
       <span>{{ routeTitle(item) }}</span>
     </template>

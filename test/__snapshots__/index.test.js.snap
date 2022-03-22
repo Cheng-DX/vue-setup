@@ -1,0 +1,12 @@
+// Vitest Snapshot v1
+
+exports[`random > text 1`] = `
+"
+  function randomXData(seed) {
+    let data = [];
+    for (let i = 0; i < seed; i++) {
+      data.push('X' + (i + 1))
+    }
+    return data;
+  }"
+`;
