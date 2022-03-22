@@ -1,3 +1,22 @@
+<script setup>
+import { defineProps } from 'vue'
+import routeTitle from '@/function/routeTitle';
+
+defineProps({
+  item: {
+    type: Object,
+    required: true
+  },
+  basePath: {
+    type: String,
+    required: true
+  }
+})
+
+const hasMoreChildren = route => route.children?.length > 1
+const hasOneChild = route => route.children?.length === 1
+</script>
+
 <template>
   <el-sub-menu v-if="hasMoreChildren(item)" :index="item.path">
     <template #title>
@@ -16,25 +35,6 @@
   >{{ routeTitle(item.children[0]) }}</el-menu-item>
   <el-menu-item v-else :index="basePath + '/' + item.path">{{ routeTitle(item) }}</el-menu-item>
 </template>
-
-<script setup>
-import { defineProps } from 'vue'
-import routeTitle from '@/function/routeTitle';
-
-defineProps({
-  item: {
-    type: Object,
-    required: true
-  },
-  basePath: {
-    type: String,
-    required: true
-  }
-});
-
-const hasMoreChildren = route => route.children?.length > 1
-const hasOneChild = route => route.children?.length === 1
-</script>
 
 <style scoped>
 </style>

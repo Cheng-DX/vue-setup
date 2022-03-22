@@ -1,3 +1,17 @@
+<script setup>
+import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
+import routeTitle from '@/function/routeTitle'
+import { Fold, Expand } from '@element-plus/icons-vue'
+import { useCollapseStore } from '@/stores/collapse';
+
+const route = useRoute()
+const matched = computed(() => route.matched)
+
+const collapseStore = useCollapseStore()
+const collapse = computed(() => collapseStore.collapse)
+</script>
+
 <template>
   <el-header class="header">
     <el-icon size="30" @click="collapseStore.change()" class="icon">
@@ -14,20 +28,6 @@
     </el-breadcrumb>
   </el-header>
 </template>
-
-<script setup>
-import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
-import routeTitle from '@/function/routeTitle'
-import { Fold, Expand } from '@element-plus/icons-vue'
-import { useCollapseStore } from '@/stores/collapse';
-
-const route = useRoute()
-const matched = computed(() => route.matched)
-
-const collapseStore = useCollapseStore()
-const collapse = computed(() => collapseStore.collapse)
-</script>
 
 <style scoped lang="scss">
 .header {

@@ -1,13 +1,3 @@
-<template>
-  <el-aside class="slider">
-    <el-menu router :default-active="currentRoute" :collapse="collapse">
-      <template v-for="route in routes">
-        <menu-item v-if="!notLoad(route)" :item="route" base-path :key="route.path" />
-      </template>
-    </el-menu>
-  </el-aside>
-</template>
-
 <script setup>
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -27,6 +17,16 @@ const notLoad = (route) => {
   return route.meta?.notLoad
 }
 </script>
+
+<template>
+  <el-aside class="slider">
+    <el-menu router :default-active="currentRoute" :collapse="collapse">
+      <template v-for="route in routes">
+        <menu-item v-if="!notLoad(route)" :item="route" base-path :key="route.path" />
+      </template>
+    </el-menu>
+  </el-aside>
+</template>
 
 <style scoped>
 .slider {

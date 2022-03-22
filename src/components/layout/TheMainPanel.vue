@@ -1,12 +1,12 @@
+<script setup>
+import { RouterView } from 'vue-router';
+</script>
+
 <template>
   <el-main class="main">
     <router-view />
   </el-main>
 </template>
-
-<script setup>
-import { RouterView } from 'vue-router';
-</script>
 
 <style scoped>
 .main.el-main {
