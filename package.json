@@ -1,6 +1,7 @@
 {
-  "name": "vue-naive",
+  "name": "vue-setup-element",
   "version": "0.0.0",
+  "author": "ChengDX",
   "scripts": {
     "test": "vitest",
     "dev": "vite",
