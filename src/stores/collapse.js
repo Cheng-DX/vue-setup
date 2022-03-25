@@ -6,7 +6,7 @@ export const useCollapseStore = defineStore({
     collapse: true
   }),
   actions: {
-    change(){
+    change() {
       this.collapse = !this.collapse
     }
   }

@@ -1,7 +1,8 @@
-import { ref } from "vue"
-import { useEventListener } from "./useEventListener"
+import { ref } from 'vue'
+import { useEventListener } from './useEventListener'
 
-const x = ref(0), y = ref(0)
+const x = ref(0),
+  y = ref(0)
 const event = 'mousemove'
 const listener = event => {
   x.value = event.pageX

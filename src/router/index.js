@@ -1,5 +1,3 @@
-
-import { nextTick } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import dashboardRouter from './dashboardRouter.js'

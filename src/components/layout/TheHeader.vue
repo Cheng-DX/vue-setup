@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import routeTitle from '@/function/routeTitle'
 import { Fold, Expand } from '@element-plus/icons-vue'
-import { useCollapseStore } from '@/stores/collapse';
+import { useCollapseStore } from '@/stores/collapse'
 
 const route = useRoute()
 const matched = computed(() => route.matched)
@@ -23,7 +23,8 @@ const collapse = computed(() => collapseStore.collapse)
         <el-breadcrumb-item
           v-if="!(route.children?.length === 1)"
           :to="route.path"
-        >{{ routeTitle(route) }}</el-breadcrumb-item>
+          >{{ routeTitle(route) }}</el-breadcrumb-item
+        >
       </template>
     </el-breadcrumb>
   </el-header>

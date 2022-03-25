@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps } from 'vue'
-import routeTitle from '@/function/routeTitle';
+import routeTitle from '@/function/routeTitle'
 
 defineProps({
   item: {
@@ -32,9 +32,11 @@ const hasOneChild = route => route.children?.length === 1
   <el-menu-item
     v-else-if="hasOneChild(item)"
     :index="basePath + '/' + item.children[0].path"
-  >{{ routeTitle(item.children[0]) }}</el-menu-item>
-  <el-menu-item v-else :index="basePath + '/' + item.path">{{ routeTitle(item) }}</el-menu-item>
+    >{{ routeTitle(item.children[0]) }}</el-menu-item
+  >
+  <el-menu-item v-else :index="basePath + '/' + item.path">
+    {{ routeTitle(item) }}
+  </el-menu-item>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
